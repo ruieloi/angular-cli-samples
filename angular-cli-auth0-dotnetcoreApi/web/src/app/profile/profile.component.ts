@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from './../auth/auth.service';
+import { AuthService } from 'app/auth/auth.service';
 
 @Component({
-  selector: 'app-profile',
+  selector: 're-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
 
@@ -21,5 +21,4 @@ export class ProfileComponent implements OnInit {
       });
     }
   }
-
 }

@@ -1,14 +1,14 @@
-import { CallingApiPage } from './app.po';
+import { AngularCliAuth0Page } from './app.po';
 
-describe('calling-api App', () => {
-  let page: CallingApiPage;
+describe('angular-cli-auth0 App', () => {
+  let page: AngularCliAuth0Page;
 
   beforeEach(() => {
-    page = new CallingApiPage();
+    page = new AngularCliAuth0Page();
   });
 
-  it('should display message saying app works', () => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Welcome to re!!');
   });
 });

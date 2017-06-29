@@ -7,11 +7,11 @@ import 'rxjs/add/operator/map';
 @Component({
   selector: 'app-ping',
   templateUrl: './ping.component.html',
-  styleUrls: ['./ping.component.css']
+  styleUrls: ['./ping.component.scss']
 })
 export class PingComponent implements OnInit {
 
-  API_URL = 'http://localhost:3001/api';
+  API_URL = 'http://localhost:1479/api';
   message: string;
 
   constructor(public auth: AuthService, public http: Http, public authHttp: AuthHttp) {}
@@ -21,20 +21,34 @@ export class PingComponent implements OnInit {
 
   public ping(): void {
     this.message = '';
-    this.http.get(`${this.API_URL}/public`)
-      .map(res => res.json())
+  
+    this.http.get(`${this.API_URL}/ping`)
+      .map(res => {
+        console.log(res);
+        return res.json();
+      } )
       .subscribe(
-        data => this.message = data.message,
+        data => {
+        console.log(data);
+       this.message = data
+      },
+      
         error => this.message = error
       );
   }
 
   public securedPing(): void {
     this.message = '';
-    this.authHttp.get(`${this.API_URL}/private`)
+    console.log('private');
+    this.authHttp.get(`${this.API_URL}/messages`)
       .map(res => res.json())
       .subscribe(
-        data => this.message = data.message,
+        data => 
+        {
+        console.log(data);
+          this.message = data
+      },
+     
         error => this.message = error
       );
   }

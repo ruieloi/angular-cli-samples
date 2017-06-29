@@ -27,9 +27,14 @@ namespace WebAPIApplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Add framework services.
-            services.AddMvc();
+            services.AddCors();
 
+            // Add framework services.
+            services.AddMvc().AddJsonOptions(options => {
+                options.SerializerSettings.ReferenceLoopHandling =
+                    Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            });
+            
             string domain = $"https://{Configuration["Auth0:Domain"]}/";
             services.AddAuthorization(options =>
             {
@@ -52,6 +57,12 @@ namespace WebAPIApplication
                 Authority = $"https://{Configuration["Auth0:Domain"]}/"
             };
             app.UseJwtBearerAuthentication(options);
+
+            app.UseCors(builder =>
+                builder.WithOrigins("http://localhost:4200")
+                    .AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod());
 
             app.UseMvc();
         }

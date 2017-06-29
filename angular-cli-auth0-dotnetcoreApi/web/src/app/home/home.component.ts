@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from './../auth/auth.service';
+import { AuthService } from 'app/auth/auth.service';
 
 @Component({
-  selector: 'app-home',
+  selector: 're-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  title = 'Angular Cli with Auth0 sample';  
 
   constructor(public auth: AuthService) { }
 

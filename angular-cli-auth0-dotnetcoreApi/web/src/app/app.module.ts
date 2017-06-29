@@ -1,20 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpModule, Http, RequestOptions } from '@angular/http';
-import { RouterModule } from '@angular/router';
+import { AuthHttp, AuthConfig } from 'angular2-jwt';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthService } from 'app/auth/auth.service';
 import { HomeComponent } from './home/home.component';
-
-import { ROUTES } from './app.routes';
-
-import { AuthService } from './auth/auth.service';
+import { CallbackComponent } from './callback/callback.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PingComponent } from './ping/ping.component';
-import { CallbackComponent } from './callback/callback.component';
-
-import { AuthHttp, AuthConfig } from 'angular2-jwt';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
   return new AuthHttp(new AuthConfig({
@@ -27,15 +22,14 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
   declarations: [
     AppComponent,
     HomeComponent,
+    CallbackComponent,
     ProfileComponent,
-    PingComponent,
-    CallbackComponent
+    PingComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule,
-    RouterModule.forRoot(ROUTES)
+     HttpModule,
+    AppRoutingModule
   ],
   providers: [
     AuthService,
@@ -43,8 +37,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
       provide: AuthHttp,
       useFactory: authHttpServiceFactory,
       deps: [Http, RequestOptions]
-    }
-  ],
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
