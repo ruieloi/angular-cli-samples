@@ -13,6 +13,7 @@ export class PingComponent implements OnInit {
 
   API_URL = 'http://localhost:1479/api';
   message: string;
+  messages: [any];
 
   constructor(public auth: AuthService, public http: Http, public authHttp: AuthHttp) {}
 
@@ -21,34 +22,34 @@ export class PingComponent implements OnInit {
 
   public ping(): void {
     this.message = '';
-  
+
     this.http.get(`${this.API_URL}/ping`)
       .map(res => {
         console.log(res);
-        return res.json();
+        return 'Pong';
       } )
       .subscribe(
-        data => {
-        console.log(data);
-       this.message = data
-      },
-      
+        data =>  {
+          this.messages = null;
+          this.message =data;
+        },
         error => this.message = error
       );
   }
 
   public securedPing(): void {
     this.message = '';
-    console.log('private');
+    console.log('messages');
     this.authHttp.get(`${this.API_URL}/messages`)
       .map(res => res.json())
       .subscribe(
-        data => 
+        data =>
         {
-        console.log(data);
-          this.message = data
-      },
-     
+          console.log(data);
+          this.messages = data;
+          console.log(this.messages);
+          this.message = '';
+        },
         error => this.message = error
       );
   }

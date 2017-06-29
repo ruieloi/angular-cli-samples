@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { CallbackComponent } from './callback/callback.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PingComponent } from './ping/ping.component';
+import { DateFormatPipe } from './date-format.pipe';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
   return new AuthHttp(new AuthConfig({
@@ -24,7 +25,8 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     HomeComponent,
     CallbackComponent,
     ProfileComponent,
-    PingComponent
+    PingComponent,
+    DateFormatPipe
   ],
   imports: [
     BrowserModule,

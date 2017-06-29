@@ -13,3 +13,10 @@
 </button>
 
 <h2>{{ message }}</h2>
+
+<table *ngIf="messages != null">
+    <tr *ngFor='let m of messages;'>
+        <td>{{ m.date | dateFormat }}</td>
+        <td>{{ m.subject }}</td>
+    </tr>
+</table>
