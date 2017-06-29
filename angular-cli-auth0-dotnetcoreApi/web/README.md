@@ -23,6 +23,13 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
 
+## Requirments Auth0
+
+ - Create account
+ - Create API 
+    - store Identifier = Audience value
+    - add scopes read:messages and write:messages
+ - Create SPA/Client (store clientID, clientsecret)
 
 ## Steps to create code
 
@@ -39,6 +46,8 @@ Run
 - `ng g c home `  create home component 
 - `ng g c callback `  create callback component 
 - `ng g c profile `  create profile component 
+- `ng g c ping `  create profile component 
+- `add components to routing `
 
 
 
