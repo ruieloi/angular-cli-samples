@@ -7,7 +7,7 @@ import { AuthService } from 'app/auth/auth.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  title = 'Angular Cli with Auth0 sample';  
+  title = 'Angular Cli with Auth0 Tentant Sample';  
 
   constructor(public auth: AuthService) { }
 

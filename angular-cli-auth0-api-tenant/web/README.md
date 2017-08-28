@@ -30,6 +30,10 @@ Before running the tests make sure you are serving the app via `ng serve`.
     - store Identifier = Audience value
     - add scopes read:messages and write:messages
  - Create SPA/Client (store clientID, clientsecret)
+ - Create Rule
+
+
+
 
 ## Steps to create code
 

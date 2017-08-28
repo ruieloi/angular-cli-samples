@@ -1,6 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace WebAPIApplication.Controllers
 {
@@ -17,6 +18,8 @@ namespace WebAPIApplication.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
+            var claimsIdentity = User.Identity as ClaimsIdentity;
+
             return Json(new Message[] 
             {
                 new Message
