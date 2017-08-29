@@ -30,10 +30,12 @@ Before running the tests make sure you are serving the app via `ng serve`.
     - store Identifier = Audience value
     - add scopes read:messages and write:messages
  - Create SPA/Client (store clientID, clientsecret)
+ - API
+  You can find the API examples in https://github.com/ruieloi/dotnet-samples/tree/master/auth0-webapi
 
 ## Steps to create code
 
-Run 
+``` 
 - `ng new {appname} --routing ` 
 - `cd {appname} `
 - `npm install `  
@@ -48,7 +50,7 @@ Run
 - `ng g c profile `  create profile component 
 - `ng g c ping `  create profile component 
 - `add components to routing `
-
+```
 
 
 
