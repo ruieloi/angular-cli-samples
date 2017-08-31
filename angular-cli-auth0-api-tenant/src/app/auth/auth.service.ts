@@ -27,10 +27,25 @@ export class AuthService {
 
   public handleAuthentication(): void {
     this.auth0.parseHash((err, authResult) => {
+
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
         this.setSession(authResult);
-        this.router.navigate(['/home']);
+
+        this.getProfile((err, profile) => {
+          this.userProfile = profile;
+          if(!this.validTenant()){
+            localStorage.setItem('isValidTenant', 'false');
+            this.router.navigate(['/register']);
+          }
+          else
+          {
+            localStorage.setItem('isValidTenant', 'true');
+            this.router.navigate(['/home']);
+          }
+        });
+
+
       } else if (err) {
         this.router.navigate(['/home']);
         console.log(err);
@@ -52,15 +67,24 @@ export class AuthService {
     localStorage.removeItem('access_token');
     localStorage.removeItem('id_token');
     localStorage.removeItem('expires_at');
+    localStorage.removeItem('isValidTenant');
     // Go back to the home route
     this.router.navigate(['/']);
+  }
+
+  public validTenant(): boolean {
+    if(this.userProfile.app_metadata == null){
+      return false;
+    }
+    //TODO check tentant data
+    return true;
   }
 
   public isAuthenticated(): boolean {
     // Check whether the current time is past the
     // access token's expiry time
     const expiresAt = JSON.parse(localStorage.getItem('expires_at'));
-    return new Date().getTime() < expiresAt;
+    return new Date().getTime() < expiresAt && localStorage.getItem('isValidTenant') === 'true';
   }
 
   public getProfile(cb): void {
@@ -73,6 +97,8 @@ export class AuthService {
     this.auth0.client.userInfo(accessToken, (err, profile) => {
       if (profile) {
         self.userProfile = profile;
+        //optimize app_metada property
+        self.userProfile.app_metadata = profile[AUTH_CONFIG.namespace + 'appMetadata'];
       }
       cb(err, profile);
     });

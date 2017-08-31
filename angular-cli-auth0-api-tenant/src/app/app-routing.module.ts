@@ -4,6 +4,7 @@ import { CallbackComponent } from 'app/callback/callback.component';
 import { HomeComponent } from 'app/home/home.component';
 import { ProfileComponent } from 'app/profile/profile.component';
 import { PingComponent } from 'app/ping/ping.component';
+import { RegisterComponent } from 'app/register/register.component';
 
 
 const routes: Routes = [
@@ -11,8 +12,9 @@ const routes: Routes = [
   { path: 'callback', component: CallbackComponent },
   { path: 'home', component: HomeComponent },
   { path: 'ping', component: PingComponent },
-  { path: 'profile', component: ProfileComponent }
-  
+  { path: 'profile', component: ProfileComponent },
+  { path: 'register', component: RegisterComponent }
+
 ];
 
 @NgModule({

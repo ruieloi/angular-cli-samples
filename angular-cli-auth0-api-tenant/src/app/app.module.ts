@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule, Http, RequestOptions } from '@angular/http';
 import { AuthHttp, AuthConfig } from 'angular2-jwt';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { CallbackComponent } from './callback/callback.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PingComponent } from './ping/ping.component';
 import { DateFormatPipe } from './date-format.pipe';
+import { RegisterComponent } from './register/register.component';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
   return new AuthHttp(new AuthConfig({
@@ -26,12 +28,15 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     CallbackComponent,
     ProfileComponent,
     PingComponent,
-    DateFormatPipe
+    DateFormatPipe,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
      HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     AuthService,
