@@ -1,6 +1,9 @@
-# AngularCliAuth0
+# Angular-cli-auth0-api-tenant
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
+
+This sample shows how you can validate if a user login have a tenant associated with it and if not asks for a register of the tenant.
+This sample uses a API to finalize the tenant registry. (this can be done everything in client side but since I already have a sample in API to do this...) https://github.com/ruieloi/dotnet-samples/tree/master/auth0-managementAPI-webapi
 
 ## Development server
 
