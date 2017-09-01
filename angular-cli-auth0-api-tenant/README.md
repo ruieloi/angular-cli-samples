@@ -31,6 +31,15 @@ Before running the tests make sure you are serving the app via `ng serve`.
     - add scopes read:messages and write:messages
  - Create SPA/Client (store clientID, clientsecret)
  - Create Rule
+ 
+ ```
+ function (user, context, callback) {
+  var namespace = 'https://myapp.example.com/';
+   context.idToken[namespace + 'appMetadata'] = user.app_metadata;
+
+  callback(null, user, context);
+}
+```
 
 
 
