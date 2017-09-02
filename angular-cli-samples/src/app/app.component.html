@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Angular-cli-Samples</a>
+
+            <button class="btn btn-primary btn-margin" routerLink="/">Home</button>
+            <button class="btn btn-primary btn-margin" *ngIf="!authenticationService.isAuthenticated()" (click)="btnLoginClick()">Log In</button>
+            <button class="btn btn-primary btn-margin" *ngIf="authenticationService.isAuthenticated()" (click)="btnLogoutClick()">Log Out</button>
+        </div>
+    </div>
+</nav>
+<router-outlet></router-outlet>
+<simple-notifications></simple-notifications>
