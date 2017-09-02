@@ -1,6 +1,7 @@
 # AngularCliSamples
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
+This project it's a repository of various samples. I base a lot of tutorials from the web and the idea it's to create a repository with some base stuff I can reuse in actual projects.
+Project in SCSS, Angular-Cli
 
 ## Development server
 
@@ -59,6 +60,7 @@ In src/styles.sass, add the following:
 
 * Top Bar 
 * Login (done)
+    * http://jasonwatmore.com/post/2016/09/29/angular-2-user-registration-and-login-example-tutorial
 * Notifications (done)
     * https://github.com/flauc/angular2-notifications/blob/master/docs/toastNotifications.md
 * Register
