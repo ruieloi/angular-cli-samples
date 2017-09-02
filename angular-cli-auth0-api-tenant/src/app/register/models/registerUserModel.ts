@@ -1,21 +1,19 @@
 export class RegisterUserModel {
 
   public email: string;
-  public firstName: string;
   public name: string;
-  public lastName: string;
+  public tenant: string;
+  public tenantDomain: string;
 
   constructor(
     email: string,
-    name: string,
-    firstName: string,
-    lastName?: string
+    name: string
   ) {
 
       this.email = email;
-      this.firstName = firstName;
       this.name = name;
-      this.lastName = lastName;
+      this.tenant = '';
+      this.tenantDomain = '';
    }
 
 }

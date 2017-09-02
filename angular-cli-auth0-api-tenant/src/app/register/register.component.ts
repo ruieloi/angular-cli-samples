@@ -3,6 +3,7 @@ import { AuthService } from "app/auth/auth.service";
 import { AuthHttp } from "angular2-jwt/angular2-jwt";
 import { Http } from '@angular/http';
 import { RegisterUserModel } from "app/register/models/registerUserModel";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 're-register',
@@ -12,12 +13,14 @@ import { RegisterUserModel } from "app/register/models/registerUserModel";
 
 export class RegisterComponent implements OnInit {
 
-  constructor(public auth: AuthService, public http: Http, public authHttp: AuthHttp) {}
+  constructor(public auth: AuthService, public http: Http, public authHttp: AuthHttp,public router: Router) {}
 
-  model: RegisterUserModel = new RegisterUserModel('a', 'b', 'c', 'd');
+  model: RegisterUserModel = null;
   loading = false;
 
   ngOnInit() {
+    if(this.auth.userProfile == null) this.router.navigate(['/home']);
+    this.model =  new RegisterUserModel(this.auth.userProfile.email,this.auth.userProfile.name);
   }
 
   register() {
