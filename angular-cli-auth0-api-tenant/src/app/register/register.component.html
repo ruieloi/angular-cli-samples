@@ -1,31 +1,28 @@
-<h1>
-    Heyyy!!! looks like you don't have a subscription yet. Please fill this form to get starting.
-
-</h1>
+<h2>
+    Heyyy {{model.name}}!! Loks like you don't have a subscription yet. Please fill this form to get starting.
+</h2>
 
 <form name="form" (ngSubmit)="f.form.valid && register()" novalidate #f="ngForm">
-    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
-        <label for="firstName">First Name</label>
-
-        <input type="text" class="form-control" name="email" required [(ngModel)]="model.email">
-        <p>Hello {{model.email}}!</p>
-        <input type="text" class="form-control" name="firstName" [(ngModel)]="model.firstName" required />
-        <p>Hello {{model.firstName}}!</p>
-
-
-        <!--<input type="text" class="form-control" name="firstName" [(ngModel)]="model.firstName" required #firstName="ngModel" />-->
-        <!--<div *ngIf="f.submitted && !firstName.valid" class="help-block">First Name is required</div>-->
-    </div>
-    <!-- <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
-        <label for="lastName">Last Name</label>
-        <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" required />
-        <div *ngIf="f.submitted && !lastName.valid" class="help-block">Last Name is required</div>
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !name.valid }">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="model.name" required readonly #name="ngModel" />
+        <div *ngIf="f.submitted && !name.valid" class="help-block">Name is required</div>
     </div>
     <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
         <label for="email">Email</label>
-        <input type="text" class="form-control" name="email" [(ngModel)]="model.email" required />
+        <input type="email" class="form-control" name="email" [(ngModel)]="model.email" required readonly/>
         <div *ngIf="f.submitted && !email.valid" class="help-block">Email is required</div>
-    </div>-->
+    </div>
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !tenant.valid }">
+        <label for="tenant">Tenant</label>
+        <input type="text" class="form-control" name="tenant" [(ngModel)]="model.tenant" required />
+        <div *ngIf="f.submitted && !tenant.valid" class="help-block">Tenant is required</div>
+    </div>
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !tenantDomain.valid }">
+        <label for="tenantDomain">Tenant</label>
+        <input type="url" class="form-control" name="tenantDomain" [(ngModel)]="model.tenantDomain" required />
+        <div *ngIf="f.submitted && !tenantDomain.valid" class="help-block">Tenant Domain is required</div>
+    </div>
 
     <div class="form-group">
         <button [disabled]="loading" class="btn btn-primary">Register</button>
