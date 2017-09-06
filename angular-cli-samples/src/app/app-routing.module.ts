@@ -4,8 +4,11 @@ import { HomeComponent } from "app/home/home.component";
 import { LoginComponent } from "app/pages/login/login.component";
 
 const routes: Routes = [
+
+  //{ path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: '', component: HomeComponent },
+   { path: '', component:HomeComponent},
+
 ];
 
 @NgModule({

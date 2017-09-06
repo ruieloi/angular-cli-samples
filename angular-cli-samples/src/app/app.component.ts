@@ -13,14 +13,17 @@ export class AppComponent {
     public authenticationService : AuthenticationService,
     public router: Router
   ) { }
-  
 
-  btnLoginClick= function () {
-        this.router.navigate(['/login']);
-  };
+
+  // btnLoginClick= function () {
+  //       this.router.navigate(['/login']);
+  // };
 
   btnLogoutClick= function () {
         this.authenticationService.logout();
         window.location.reload();
   };
+  // btnHomeClick =  function () {
+  //      this.router.navigate(['/']);
+  // };
 }

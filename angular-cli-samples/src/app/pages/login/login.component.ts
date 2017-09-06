@@ -29,31 +29,19 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.loading = true;
-    if (this.authenticationService.login(this.model.username, this.model.password)) {
-      this.loading = false;
-      
-      this.router.navigate(['/']);
-      
-      const toast = this.notificationsService.success('Login OK!', 'Click to go back', {
-        timeOut: 3000,
-        pauseOnHover: true,
-        clickToClose: true
+
+    this.authenticationService.login(this.model.username, this.model.password)
+      .then(data => {
+        this.router.navigate(['/']);
+      })
+      .catch(error => {
+        const toast = this.notificationsService.error('Error!', error, {
+          timeOut: 3000,
+          pauseOnHover: true,
+          clickToClose: true
+        });
+        this.loading = false;
       });
-
-      
-    }
-    else {
-      this.loading = false;
-
-      const toast = this.notificationsService.error('Error!', 'Something happened!', {
-        timeOut: 2000,
-        pauseOnHover: true,
-        clickToClose: true
-      });
-
-      
-      
-    }
   }
 
 }
