@@ -3,7 +3,6 @@ import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import { User } from "app/common/userModel";
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 
-
 export class  InMemUserService implements InMemoryDbService {
 
     createDb() {

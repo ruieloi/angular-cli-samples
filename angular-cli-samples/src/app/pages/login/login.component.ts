@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.authenticationService.logout();
-
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
   login() {
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
 
     this.authenticationService.login(this.model.username, this.model.password)
       .then(data => {
-        this.router.navigate(['/']);
+        this.router.navigate([this.returnUrl]);
       })
       .catch(error => {
         const toast = this.notificationsService.error('Error!', error, {

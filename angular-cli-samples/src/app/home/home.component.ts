@@ -10,23 +10,20 @@ import { User } from "app/common/userModel";
 export class HomeComponent implements OnInit {
 
   title = 'angular-cli-samples';
-  currentUser:User;
+  currentUser: User;
 
   constructor(
-    public authenticationService : AuthenticationService
+    public authenticationService: AuthenticationService
   ) { }
 
   ngOnInit() {
     this.currentUser = JSON.parse(this.authenticationService.GetCurrentUser()) as User;
 
-    if(this.currentUser == null)
-    {
+    if (this.currentUser == null) {
       this.currentUser = new User(0, '', '', '');
     }
-    else
-    {
+    else {
       this.currentUser.name = '[' + this.currentUser.name + ']';
     }
   }
-
 }

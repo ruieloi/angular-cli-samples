@@ -13,12 +13,23 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AuthenticationService } from "app/services/authentication.service";
 import { InMemUserService } from "app/services/inMemUser.service";
+import { UserListComponent } from './pages/users/user-list/user-list.component';
+import { AuthGuard } from "app/common/guards/auth.guard";
+import { RegisterComponent } from './pages/register/register.component';
+import { UserformComponent } from './pages/users/userform/userform.component';
+import { SimplefieldsComponent } from './pages/form/simplefields/simplefields.component';
+import { SubscriptionListComponent } from './pages/subscription/subscription-list/subscription-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    UserListComponent,
+    RegisterComponent,
+    UserformComponent,
+    SimplefieldsComponent,
+    SubscriptionListComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +41,8 @@ import { InMemUserService } from "app/services/inMemUser.service";
     InMemoryWebApiModule.forRoot(InMemUserService)
   ],
   providers: [
-    AuthenticationService
+    AuthenticationService,
+    AuthGuard
     ],
   bootstrap: [AppComponent]
 })

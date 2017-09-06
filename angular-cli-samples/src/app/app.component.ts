@@ -14,16 +14,9 @@ export class AppComponent {
     public router: Router
   ) { }
 
-
-  // btnLoginClick= function () {
-  //       this.router.navigate(['/login']);
-  // };
-
   btnLogoutClick= function () {
+        //removes user from memory
         this.authenticationService.logout();
         window.location.reload();
   };
-  // btnHomeClick =  function () {
-  //      this.router.navigate(['/']);
-  // };
 }
