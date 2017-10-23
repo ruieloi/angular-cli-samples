@@ -17,3 +17,8 @@ TODO
 Create a new subscription, add a user and link the user to the subscription
 Add other users to the subscription
 Remove user from subscription
+
+## angular-cli-translate
+
+Based in ngx-translate uses json files for translations.
+This project uses https://github.com/ngx-translate/http-loader
