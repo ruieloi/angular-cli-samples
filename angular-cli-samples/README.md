@@ -59,18 +59,23 @@ In src/styles.sass, add the following:
 ## Samples
 
 * Top Bar 
+  * Simple top bar (done)
 * Login (done)
-    * http://jasonwatmore.com/post/2016/09/29/angular-2-user-registration-and-login-example-tutorial
+  * http://jasonwatmore.com/post/2016/09/29/angular-2-user-registration-and-login-example-tutorial
 * Notifications (done)
-    * https://github.com/flauc/angular2-notifications/blob/master/docs/toastNotifications.md
-* Register
+  * https://github.com/flauc/angular2-notifications/blob/master/docs/toastNotifications.md
+* Register (done)
 * Left Menu Navigation
 * File Upload
-* Validations
-* Components
-    * Age component
+* Form and Validations
+  * Simple Fields
+    * Textbox
+    * Numeric box    
     * Date Picker 
     * Time Picker 
+
+  * Custom Fields
+    * Age component
     * IBAN component
     * Phone component
     * Country picker component
