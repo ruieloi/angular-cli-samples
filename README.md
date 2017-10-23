@@ -22,3 +22,7 @@ Remove user from subscription
 
 Based in ngx-translate uses json files for translations.
 This project uses https://github.com/ngx-translate/http-loader
+
+## angular-cli-material
+
+Angular Material 2 example
