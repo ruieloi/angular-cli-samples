@@ -2,6 +2,7 @@
 @include mat-core();
 @import 'variables.scss';
 @import 'sidenav.scss';
+@import 'button.scss';
 $my-app-primary: mat-palette($mat-blue-grey);
 $my-app-accent: mat-palette($mat-pink, 500, 900, A100);
 $my-app-warn: mat-palette($mat-deep-orange);

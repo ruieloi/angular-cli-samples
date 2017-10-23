@@ -1,4 +1,8 @@
 @import 'variables.scss';
-md-sidenav {
+mat-sidenav {
     width: $left-sidenav-width;
+}
+
+.menu-icon {
+    padding: 0 14px;
 }
