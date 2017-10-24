@@ -18,7 +18,7 @@
         "testTsconfig": "tsconfig.spec.json",
         "prefix": "re",
         "styles": [
-            "./themes/theme1/theme1.scss",
+            "./themes/default/default.theme.scss",
             "styles.scss"
         ],
         "scripts": [],

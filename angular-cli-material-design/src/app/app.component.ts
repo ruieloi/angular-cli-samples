@@ -6,4 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  // Initialize isDarkTheme to false
+  isDarkTheme: boolean = false;
+  // Your code here
+
+  changeTheme(): void {
+      if (this.isDarkTheme) {
+         this.isDarkTheme = false;
+      } else {
+         this.isDarkTheme = true;
+      }
+   }
 }

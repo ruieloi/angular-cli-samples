@@ -1,23 +1,32 @@
-<mat-sidenav-container class="menu-container">
-    <mat-sidenav #sidenav mode="side" class="app-sidenav">
-        <md-nav-list>
-            <a mat-list-item [routerLink]="['']">Home</a>
-            <mat-divider></mat-divider>
-            <a mat-list-item [routerLink]="['buttons']">Buttons</a>
-        </md-nav-list>
-    </mat-sidenav>
+<div [class.dark-theme]="isDarkTheme">
+    <mat-sidenav-container class="menu-container">
+        <mat-sidenav #sidenav mode="side" class="app-sidenav">
+            <md-nav-list>
+                <a mat-list-item [routerLink]="['']">Home</a>
+                <mat-divider></mat-divider>
+                <a mat-list-item [routerLink]="['buttons']">Buttons</a>
+            </md-nav-list>
+        </mat-sidenav>
 
-    <div class="leftmenu-sidenav-content">
-        <mat-toolbar color="primary">
+        <div class="leftmenu-sidenav-content">
+            <mat-toolbar color="primary">
 
-            <button md-icon-button (click)="sidenav.toggle()">
+                <button md-icon-button (click)="sidenav.toggle()">
                 <mat-icon class="menu-icon">menu</mat-icon>
             </button>
-            <span>Custom Toolbar</span>
+                <span>Custom Toolbar</span>
 
-        </mat-toolbar>
+            </mat-toolbar>
 
-        <router-outlet></router-outlet>
-    </div>
 
-</mat-sidenav-container>
+            <button mat-menu-item (click)="changeTheme()">
+            Change Theme
+        </button>
+
+
+            <router-outlet></router-outlet>
+        </div>
+
+    </mat-sidenav-container>
+
+</div>
