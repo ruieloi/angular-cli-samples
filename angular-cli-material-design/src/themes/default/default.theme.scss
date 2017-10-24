@@ -3,14 +3,14 @@
 @import 'variables.scss';
 @import 'sidenav.scss';
 @import 'button.scss';
-$primary: mat-palette($mat-teal, 800);
-$accent: mat-palette($mat-green, 600, 100, 800);
+$primary: mat-palette($mat-blue, 800);
+$accent: mat-palette($mat-purple, 600, 100, 800);
 $warn: mat-palette($mat-red, 600);
 $default: mat-light-theme($primary, $accent, $warn);
 @include angular-material-theme($default);
 .dark-theme {
-    $dark-primary: mat-palette($mat-pink, 700, 500, 900);
-    $dark-accent: mat-palette($mat-blue-grey, A200, A100, A400);
+    $dark-primary: mat-palette($mat-green, 700, 500, 900);
+    $dark-accent: mat-palette($mat-grey, A200, A100, A400);
     $dark-warn: mat-palette($mat-deep-orange);
     $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
     @include angular-material-theme($dark-theme);
