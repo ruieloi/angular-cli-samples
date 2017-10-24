@@ -9,12 +9,14 @@ import { ButtonsComponent } from './samples/buttons/buttons.component';
 import { HomeComponent } from './home/home.component';
 
 import { MaterialModule } from './material/material.module';
+import { ContainerComponent } from './pages/container/container.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonsComponent,
-    HomeComponent
+    HomeComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule,

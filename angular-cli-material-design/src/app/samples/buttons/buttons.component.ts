@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NoConflictStyleCompatibilityMode} from '@angular/material';
+import { ContainerComponent } from '../../pages/container/container.component';
 
 @Component({
   selector: 're-buttons',
