@@ -29,4 +29,8 @@ settings icon
 links:
 http://elasticui.visurel.com/
 https://wrappixel.com/demos/admin-templates/material-pro/material/pages-profile.html
+https://codepen.io/kyleledbetter/pen/gbQOaV
+https://github.com/Ravi-Rajpurohit/mini-md-sidenav
 
+
+https://bootstrapious.com/p/bootstrap-sidebar
