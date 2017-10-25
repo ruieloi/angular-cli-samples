@@ -10,13 +10,15 @@ import { HomeComponent } from './home/home.component';
 
 import { MaterialModule } from './material/material.module';
 import { NavigationMenuComponent } from './pages/navigation-menu/navigation-menu.component';
+import { BreadcrumbComponent } from './pages/breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonsComponent,
     HomeComponent,
-    NavigationMenuComponent
+    NavigationMenuComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,

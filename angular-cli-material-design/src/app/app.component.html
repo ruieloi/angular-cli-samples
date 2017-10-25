@@ -28,12 +28,17 @@
 
 
     <mat-sidenav-container class="menu-container" style=" display: flex;flex-direction: column;min-height: 93.5vh;">
-        <mat-sidenav #appNavigation mode="side" class="appnavigation-sidenav">
+        <mat-sidenav #appNavigation mode="side" class="appnavigation-sidenav" opened="true">
             <navigation-menu></navigation-menu>
         </mat-sidenav>
 
         <div class="leftmenu-sidenav-content">
+
+            <mat-toolbar #containerTitle class="containerTop" *ngIf="bread.currentRoute=='Home'">
+                <breadcrumb #bread></breadcrumb>
+            </mat-toolbar>
             <div class="docs-component-viewer">
+
                 <router-outlet></router-outlet>
             </div>
         </div>

@@ -12,6 +12,10 @@
 }
 
 .menu-badge-warn {
-    background-color: $warnColor !important;
+    background-color: mat-color($warn) !important;
     color: #fff!important;
+}
+
+.containerTop {
+    margin-bottom: $paddingContainer;
 }

@@ -1,7 +1,7 @@
-$paddingContainer: 50px;
 .docs-component-viewer {
     height: 100%;
-    padding: $paddingContainer;
+    padding-left: $paddingContainer;
+    padding-right: $paddingContainer;
     margin: $paddingContainer;
     display: -webkit-box;
     display: -moz-box;
@@ -10,7 +10,6 @@ $paddingContainer: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: $paddingContainer;
 }
 
 .docs-component-viewer::-webkit-scrollbar {

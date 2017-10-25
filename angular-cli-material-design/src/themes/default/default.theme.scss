@@ -5,13 +5,10 @@
 @import 'button.scss';
 @import 'card.scss';
 @import 'navigation-menu.scss';
+@import 'breadcrumb.scss';
 @import 'container.scss';
 @import 'topnav.scss';
 @import 'footer.scss';
-$primary: mat-palette($mat-blue, 800);
-$warn: mat-palette($mat-red, 600);
-$accent: mat-palette($mat-purple, 600, 100, 800);
-$default: mat-light-theme($primary, $accent, $warn);
 @include angular-material-theme($default);
 .dark-theme {
     $dark-primary: mat-palette($mat-green, 700, 500, 900);

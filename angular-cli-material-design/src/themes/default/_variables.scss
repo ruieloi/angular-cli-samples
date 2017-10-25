@@ -1,4 +1,7 @@
-$warnColor: #F00;
+$warn: mat-palette($mat-red, 600);
+$primary: mat-palette($mat-blue, 800);
+$accent: mat-palette($mat-purple, 600, 100, 800);
+$default: mat-light-theme($primary, $accent, $warn);
 //sidenav variables
 $left-sidenav-width: 240px;
 $right-sidenav-width: 330px;
@@ -8,3 +11,4 @@ $small-breakpoint-width: 720px;
 
 $content-padding-side: 70px;
 $content-padding-side-xs: 15px;
+$paddingContainer: 50px;
