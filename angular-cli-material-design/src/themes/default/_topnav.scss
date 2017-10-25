@@ -1,0 +1,8 @@
+.topnavLeft {
+    width: $left-sidenav-width;
+}
+
+.topnavLeft a:-webkit-any-link {
+    color: #FFF;
+    text-decoration: none;
+}

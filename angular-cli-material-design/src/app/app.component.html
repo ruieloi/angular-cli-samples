@@ -1,12 +1,12 @@
 <div [class.dark-theme]="isDarkTheme" style="height: 100%;display: flex;flex-direction: column">
     <mat-toolbar color="primary">
 
-        <div class="navToolbar">
+        <div class="topnavLeft">
             <button mat-icon-button (click)="appNavigation.toggle()">
             <mat-icon class="menu-icon">menu</mat-icon>
           </button>
 
-            <span>LOGO</span>
+            <a [routerLink]="['']"><span>LOGO</span></a>
 
         </div>
 
