@@ -1,7 +1,10 @@
 @import 'variables.scss';
+.navToolbar {
+    width: $left-sidenav-width;
+}
+
 .appnavigation-sidenav {
     width: $left-sidenav-width;
-    background-color: transparent;
 }
 
 .navleft-sidenav {

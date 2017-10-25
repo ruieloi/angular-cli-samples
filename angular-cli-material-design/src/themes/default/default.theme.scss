@@ -6,8 +6,8 @@
 @import 'navigation-menu.scss';
 @import 'container.scss';
 $primary: mat-palette($mat-blue, 800);
-$accent: mat-palette($mat-purple, 600, 100, 800);
 $warn: mat-palette($mat-red, 600);
+$accent: mat-palette($mat-purple, 600, 100, 800);
 $default: mat-light-theme($primary, $accent, $warn);
 @include angular-material-theme($default);
 .dark-theme {
@@ -19,7 +19,7 @@ $default: mat-light-theme($primary, $accent, $warn);
 }
 
 re-container {
-    color: #F00;
+    color: $warnColor;
     font-weight: 400;
     padding: 20px $content-padding-side 50px;
     @media ($mat-xsmall) {

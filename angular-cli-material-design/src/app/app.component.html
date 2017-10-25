@@ -1,4 +1,31 @@
 <div [class.dark-theme]="isDarkTheme">
+    <mat-toolbar color="primary">
+
+        <div class="navToolbar">
+            <button mat-icon-button (click)="appNavigation.toggle()">
+            <mat-icon class="menu-icon">menu</mat-icon>
+          </button>
+
+            <span>LOGO</span>
+
+        </div>
+
+        <button mat-icon-button>
+                                                <mat-icon class="menu-icon">search</mat-icon>
+                                              </button>
+        <span>Application Title</span>
+
+        <span class="toptoolbar-fill-remaining-space"></span>
+
+        <button mat-icon-button (click)="changeTheme()">
+                                                <mat-icon class="menu-icon">format_color_fill</mat-icon>
+                                            </button>
+
+        <button mat-icon-button (click)="sidenavleft.toggle()">
+                                                <mat-icon class="menu-icon">format_align_right</mat-icon>
+                                            </button>
+    </mat-toolbar>
+
 
     <mat-sidenav-container class="menu-container">
         <mat-sidenav #appNavigation mode="side" class="appnavigation-sidenav">
@@ -7,26 +34,7 @@
 
         <div class="leftmenu-sidenav-content">
 
-            <mat-toolbar color="primary">
 
-                <button mat-icon-button (click)="appNavigation.toggle()">
-                                          <mat-icon class="menu-icon">menu</mat-icon>
-                                        </button>
-                <button mat-icon-button>
-                                            <mat-icon class="menu-icon">search</mat-icon>
-                                          </button>
-                <span>Application Title</span>
-
-                <span class="toptoolbar-fill-remaining-space"></span>
-
-                <button mat-icon-button (click)="changeTheme()">
-                                            <mat-icon class="menu-icon">format_color_fill</mat-icon>
-                                        </button>
-
-                <button mat-icon-button (click)="sidenavleft.toggle()">
-                                            <mat-icon class="menu-icon">format_align_right</mat-icon>
-                                        </button>
-            </mat-toolbar>
             <router-outlet></router-outlet>
         </div>
 

@@ -1,6 +1,10 @@
-<md-nav-list>
-    <a mat-list-item [routerLink]="['']">
-        <mat-icon class="menu-icon">home</mat-icon>Home</a>
-    <a mat-list-item [routerLink]="['buttons']">
-        <mat-icon class="menu-icon">Button</mat-icon>Buttons</a>
-</md-nav-list>
+<mat-nav-list>
+    <mat-list-item [routerLink]="['']">
+        <mat-icon matListIcon class="menu-icon">home</mat-icon><span mat-list-text>Home
+            <span class="menu-badge menu-badge-warn">5</span></span>
+
+    </mat-list-item>
+    <mat-list-item [routerLink]="['buttons']">
+        <mat-icon matListIcon class="menu-icon">view_module</mat-icon>Buttons
+    </mat-list-item>
+</mat-nav-list>
