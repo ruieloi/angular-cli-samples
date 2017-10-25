@@ -9,7 +9,6 @@ import { ButtonsComponent } from './samples/buttons/buttons.component';
 import { HomeComponent } from './home/home.component';
 
 import { MaterialModule } from './material/material.module';
-import { ContainerComponent } from './pages/container/container.component';
 import { NavigationMenuComponent } from './pages/navigation-menu/navigation-menu.component';
 
 @NgModule({
@@ -17,7 +16,6 @@ import { NavigationMenuComponent } from './pages/navigation-menu/navigation-menu
     AppComponent,
     ButtonsComponent,
     HomeComponent,
-    ContainerComponent,
     NavigationMenuComponent
   ],
   imports: [

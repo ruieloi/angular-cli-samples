@@ -3,6 +3,7 @@
 @import 'variables.scss';
 @import 'sidenav.scss';
 @import 'button.scss';
+@import 'card.scss';
 @import 'navigation-menu.scss';
 @import 'container.scss';
 @import 'topnav.scss';
@@ -20,37 +21,6 @@ $default: mat-light-theme($primary, $accent, $warn);
     @include angular-material-theme($dark-theme);
 }
 
-re-container {
-    color: $warnColor;
-    font-weight: 400;
-    padding: 20px $content-padding-side 50px;
-    @media ($mat-xsmall) {
-        padding-left: $content-padding-side-xs;
-        padding-right: $content-padding-side-xs;
-    }
-}
-
 .toptoolbar-fill-remaining-space {
     flex: 1 1 auto;
 }
-
-// .sidenav {
-//     height: 100%;
-//     /* 100% Full-height */
-//     width: 0;
-//     /* 0 width - change this with JavaScript */
-//     position: fixed;
-//     /* Stay in place */
-//     z-index: 1;
-//     /* Stay on top */
-//     top: 0;
-//     left: 0;
-//     background-color: #111;
-//     /* Black*/
-//     overflow-x: hidden;
-//     /* Disable horizontal scroll */
-//     padding-top: 60px;
-//     /* Place content 60px from the top */
-//     transition: 0.5s;
-//     /* 0.5 second transition effect to slide in the sidenav */
-// }

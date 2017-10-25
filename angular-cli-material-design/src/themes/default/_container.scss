@@ -1,15 +1,40 @@
+$paddingContainer: 50px;
 .docs-component-viewer {
-    margin: 0 auto;
-    max-width: 940px;
-    display: flex;
+    height: 100%;
+    padding: $paddingContainer;
+    margin: $paddingContainer;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: -webkit-flex;
-    flex-direction: row;
-    -webkit-flex-direction: row;
-    -webkit-align-content: stretch;
-    align-content: stretch;
-    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: $paddingContainer;
 }
 
 .docs-component-viewer::-webkit-scrollbar {
     display: none;
+}
+
+.home-container {
+    display: flex;
+    flex-flow: column nowrap;
+    .mat-card {
+        margin: 0 16px 16px 0;
+        width: 450px;
+    }
+    img {
+        background-color: gray;
+    }
+}
+
+.buttons-container {
+    display: flex;
+    flex-flow: column wrap;
+    flex-direction: row;
+    .mat-card {
+        margin: 0 16px 16px 0;
+        width: 450px;
+    }
 }
