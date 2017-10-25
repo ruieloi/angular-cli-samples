@@ -1,0 +1,13 @@
+@import 'variables.scss';
+.appnavigation-sidenav {
+    width: $left-sidenav-width;
+    background-color: transparent;
+}
+
+.navleft-sidenav {
+    width: $right-sidenav-width;
+}
+
+.menu-icon {
+    padding: 0 10px;
+}

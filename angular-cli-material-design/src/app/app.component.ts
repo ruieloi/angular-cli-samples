@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 're-root',
@@ -18,4 +18,5 @@ export class AppComponent {
          this.isDarkTheme = true;
       }
    }
+
 }

@@ -1,9 +1,10 @@
 @import '../../../node_modules/@angular/material/theming';
 @include mat-core();
-@import '../variables.scss';
-@import '../sidenav.scss';
-@import '../button.scss';
-@import '../container.scss';
+@import 'variables.scss';
+@import 'sidenav.scss';
+@import 'button.scss';
+@import 'navigation-menu.scss';
+@import 'container.scss';
 $primary: mat-palette($mat-blue, 800);
 $accent: mat-palette($mat-purple, 600, 100, 800);
 $warn: mat-palette($mat-red, 600);
@@ -26,3 +27,28 @@ re-container {
         padding-right: $content-padding-side-xs;
     }
 }
+
+.toptoolbar-fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+// .sidenav {
+//     height: 100%;
+//     /* 100% Full-height */
+//     width: 0;
+//     /* 0 width - change this with JavaScript */
+//     position: fixed;
+//     /* Stay in place */
+//     z-index: 1;
+//     /* Stay on top */
+//     top: 0;
+//     left: 0;
+//     background-color: #111;
+//     /* Black*/
+//     overflow-x: hidden;
+//     /* Disable horizontal scroll */
+//     padding-top: 60px;
+//     /* Place content 60px from the top */
+//     transition: 0.5s;
+//     /* 0.5 second transition effect to slide in the sidenav */
+// }

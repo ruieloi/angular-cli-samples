@@ -1,31 +1,38 @@
 <div [class.dark-theme]="isDarkTheme">
+
     <mat-sidenav-container class="menu-container">
-        <mat-sidenav #sidenav mode="side" class="app-sidenav">
-            <md-nav-list>
-                <a mat-list-item [routerLink]="['']">Home</a>
-                <mat-divider></mat-divider>
-                <a mat-list-item [routerLink]="['buttons']">Buttons</a>
-            </md-nav-list>
+        <mat-sidenav #appNavigation mode="side" class="appnavigation-sidenav">
+            <navigation-menu></navigation-menu>
         </mat-sidenav>
 
         <div class="leftmenu-sidenav-content">
+
             <mat-toolbar color="primary">
 
-                <button md-icon-button (click)="sidenav.toggle()">
-                <mat-icon class="menu-icon">menu</mat-icon>
-            </button>
-                <span>Custom Toolbar</span>
+                <button mat-icon-button (click)="appNavigation.toggle()">
+                                          <mat-icon class="menu-icon">menu</mat-icon>
+                                        </button>
+                <button mat-icon-button>
+                                            <mat-icon class="menu-icon">search</mat-icon>
+                                          </button>
+                <span>Application Title</span>
 
+                <span class="toptoolbar-fill-remaining-space"></span>
+
+                <button mat-icon-button (click)="changeTheme()">
+                                            <mat-icon class="menu-icon">format_color_fill</mat-icon>
+                                        </button>
+
+                <button mat-icon-button (click)="sidenavleft.toggle()">
+                                            <mat-icon class="menu-icon">format_align_right</mat-icon>
+                                        </button>
             </mat-toolbar>
-
-
-            <button mat-menu-item (click)="changeTheme()">
-            Change Theme
-        </button>
-
-
             <router-outlet></router-outlet>
         </div>
+
+        <mat-sidenav align="end" #sidenavleft mode="over" class="navleft-sidenav">
+            aaaaaa
+        </mat-sidenav>
 
     </mat-sidenav-container>
 

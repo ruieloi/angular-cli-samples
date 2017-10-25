@@ -1,0 +1,32 @@
+LEFT MENU
+	- hamburguer menu
+	- items
+	- photo user
+	- user menu
+	
+right menu - quickpanel
+
+Search button 
+Search box
+
+icon alert
+
+user menu top
+
+language menu
+
+page banner (nome, breadcrumb, small report icon)
+
+
+right menu 
+	- overview
+	- notifications
+	
+settings icon
+
+
+
+links:
+http://elasticui.visurel.com/
+https://wrappixel.com/demos/admin-templates/material-pro/material/pages-profile.html
+
