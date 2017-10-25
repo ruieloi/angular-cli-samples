@@ -1,4 +1,15 @@
 .docs-component-viewer {
     margin: 0 auto;
     max-width: 940px;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -webkit-align-content: stretch;
+    align-content: stretch;
+    overflow-y: hidden;
+}
+
+.docs-component-viewer::-webkit-scrollbar {
+    display: none;
 }
