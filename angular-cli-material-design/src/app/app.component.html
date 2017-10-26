@@ -15,7 +15,7 @@
                                               </button>
         <span>Application Title</span>
 
-        <span class="toptoolbar-fill-remaining-space"></span>
+        <span class="fill-remaining-space"></span>
 
         <button mat-icon-button (click)="changeTheme()">
                                                 <mat-icon class="menu-icon">format_color_fill</mat-icon>
@@ -32,11 +32,14 @@
             <navigation-menu></navigation-menu>
         </mat-sidenav>
 
-        <div class="leftmenu-sidenav-content">
+        <div class="leftmenu-sidenav-content mat-typography">
 
-            <mat-toolbar #containerTitle class="containerTop" *ngIf="bread.currentRoute=='Home'">
-                <breadcrumb #bread></breadcrumb>
-            </mat-toolbar>
+            <div [hidden]="!bread.canShowBreadcrumb()">
+                <mat-toolbar #containerTitle class="containerTop">
+                    <breadcrumb #bread></breadcrumb>
+                </mat-toolbar>
+            </div>
+
             <div class="docs-component-viewer">
 
                 <router-outlet></router-outlet>

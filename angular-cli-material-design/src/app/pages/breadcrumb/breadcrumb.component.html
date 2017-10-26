@@ -1,7 +1,18 @@
-<span>{{currentRoute}}</span>
-<ul class="breadcrumb">
-    <li><a routerLink="" class="breadcrumb">Home</a></li>
-    <li *ngFor="let breadcrumb of breadcrumbs; let last = last" [ngClass]="{ active: last }">
-        <a [routerLink]="[breadcrumb.url, breadcrumb.params]">{{breadcrumb.label}}</a>
-    </li>
-</ul>
+<div class="breadcrumb-container mat-typography">
+    <div>
+        <span class="mat-headline uppercase">{{currentRoute}}</span>
+        <ul class="breadcrumb mat-caption ">
+            <li><a routerLink="" class="breadcrumb">Home</a></li>
+            <li *ngFor="let breadcrumb of breadcrumbs; let last = last" [ngClass]="{ active: last }">
+                <a [routerLink]="[breadcrumb.url, breadcrumb.params]">{{breadcrumb.label}}</a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="fill-remaining-space">
+
+    </div>
+    <div>
+        small data
+    </div>
+</div>

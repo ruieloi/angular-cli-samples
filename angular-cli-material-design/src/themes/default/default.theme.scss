@@ -1,6 +1,7 @@
 @import '../../../node_modules/@angular/material/theming';
 @include mat-core();
 @import 'variables.scss';
+@import 'typography.scss';
 @import 'sidenav.scss';
 @import 'button.scss';
 @import 'card.scss';
@@ -18,6 +19,6 @@
     @include angular-material-theme($dark-theme);
 }
 
-.toptoolbar-fill-remaining-space {
+.fill-remaining-space {
     flex: 1 1 auto;
 }
