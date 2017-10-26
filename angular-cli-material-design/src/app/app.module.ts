@@ -11,6 +11,9 @@ import { HomeComponent } from './home/home.component';
 import { MaterialModule } from './material/material.module';
 import { NavigationMenuComponent } from './pages/navigation-menu/navigation-menu.component';
 import { BreadcrumbComponent } from './pages/breadcrumb/breadcrumb.component';
+import { LanguagePickerComponent } from './pages/language-picker/language-picker.component';
+import { HttpModule } from '@angular/http';
+import { ProfileMenuComponent } from './pages/profile-menu/profile-menu.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +21,16 @@ import { BreadcrumbComponent } from './pages/breadcrumb/breadcrumb.component';
     ButtonsComponent,
     HomeComponent,
     NavigationMenuComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    LanguagePickerComponent,
+    ProfileMenuComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

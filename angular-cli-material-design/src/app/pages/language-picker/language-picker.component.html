@@ -1,0 +1,17 @@
+<button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>language</mat-icon>
+  </button>
+<mat-menu #menu="matMenu" xPosition="before">
+    <button mat-menu-item>
+      <mat-icon svgIcon="flag-pt" class="menu-picker-item"></mat-icon>
+      <span>PT</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon svgIcon="flag-en" class="menu-picker-item"></mat-icon>
+      <span>EN</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon svgIcon="flag-fr" class="menu-picker-item"></mat-icon>
+      <span>FR</span>
+    </button>
+</mat-menu>

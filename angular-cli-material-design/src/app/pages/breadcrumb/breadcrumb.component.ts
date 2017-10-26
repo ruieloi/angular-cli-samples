@@ -2,16 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { IBreadcrumb } from 'app/pages/breadcrumb/ibreadcrumb';
 import { ActivatedRoute, NavigationEnd, Router, PRIMARY_OUTLET } from '@angular/router';
 import "rxjs/add/operator/filter";
+import { ROUTE_HOME } from 'app/constants';
 
 @Component({
   selector: 'breadcrumb',
   templateUrl: './breadcrumb.component.html',
   styleUrls: ['./breadcrumb.component.scss']
 })
+
+
 export class BreadcrumbComponent implements OnInit {
 
   public breadcrumbs: IBreadcrumb[];
   public currentRoute: string = '';
+
+
 
     constructor(
       private activatedRoute: ActivatedRoute,
@@ -26,27 +31,22 @@ export class BreadcrumbComponent implements OnInit {
       //subscribe to the NavigationEnd event
       this.router.events.filter(event => event instanceof NavigationEnd).subscribe(event => {
 
-        console.log("route changed");
+        // console.log("route changed");
+
         //set breadcrumbs
         let root: ActivatedRoute = this.activatedRoute.root;
         this.breadcrumbs = this.getBreadcrumbs(root);
 
-        if(this.breadcrumbs.length > 1){
+        if(this.breadcrumbs.length > 1)
           this.currentRoute = this.breadcrumbs.slice(-1)[0].label;
-
-        }
-        else{
-          this.currentRoute = 'Home';
-        }
-
-        console.log(this.currentRoute);
-
+        else
+          this.currentRoute = ROUTE_HOME;
       });
     }
 
     canShowBreadcrumb() {
       console.log(this.currentRoute);
-      if(this.currentRoute == null || this.currentRoute == 'Home')
+      if(this.currentRoute == null || this.currentRoute == ROUTE_HOME)
       {
         return false;
       }
