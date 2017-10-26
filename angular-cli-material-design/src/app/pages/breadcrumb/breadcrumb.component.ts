@@ -3,6 +3,7 @@ import { IBreadcrumb } from 'app/pages/breadcrumb/ibreadcrumb';
 import { ActivatedRoute, NavigationEnd, Router, PRIMARY_OUTLET } from '@angular/router';
 import "rxjs/add/operator/filter";
 import { ROUTE_HOME } from 'app/constants';
+import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 @Component({
   selector: 'breadcrumb',
@@ -14,13 +15,16 @@ import { ROUTE_HOME } from 'app/constants';
 export class BreadcrumbComponent implements OnInit {
 
   public breadcrumbs: IBreadcrumb[];
-  public currentRoute: string = '';
-
-
+  public currentRoute: IBreadcrumb= {
+    label: 'Home',
+    url: 'Home',
+    code: 'Home'
+  };
 
     constructor(
       private activatedRoute: ActivatedRoute,
-      private router: Router
+      private router: Router,
+      private translate: TranslateService
     ) {
       this.breadcrumbs = [];
     }
@@ -38,15 +42,30 @@ export class BreadcrumbComponent implements OnInit {
         this.breadcrumbs = this.getBreadcrumbs(root);
 
         if(this.breadcrumbs.length > 1)
-          this.currentRoute = this.breadcrumbs.slice(-1)[0].label;
+          this.currentRoute = this.breadcrumbs.slice(-1)[0];
         else
-          this.currentRoute = ROUTE_HOME;
+          this.currentRoute = this.breadcrumbs[0];
+      });
+
+      this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+        this.getTranslations();
+      });
+    }
+
+    getTranslations(){
+      if(this.breadcrumbs == null) return;
+
+      this.breadcrumbs.forEach(breadcrumb => {
+        this.translate.get('ROUTE_' + breadcrumb.code.toUpperCase()).subscribe((result: string) => {
+          console.log(result);
+          breadcrumb.label = result;
+        });
       });
     }
 
     canShowBreadcrumb() {
       console.log(this.currentRoute);
-      if(this.currentRoute == null || this.currentRoute == ROUTE_HOME)
+      if(this.currentRoute == null || this.currentRoute.code == ROUTE_HOME)
       {
         return false;
       }
@@ -87,7 +106,8 @@ export class BreadcrumbComponent implements OnInit {
         let breadcrumb: IBreadcrumb = {
           label: child.snapshot.data[ROUTE_DATA_BREADCRUMB],
           params: child.snapshot.params,
-          url: url
+          url: url,
+          code: child.snapshot.data[ROUTE_DATA_BREADCRUMB]
         };
         breadcrumbs.push(breadcrumb);
 

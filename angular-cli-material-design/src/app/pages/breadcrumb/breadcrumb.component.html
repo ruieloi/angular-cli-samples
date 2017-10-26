@@ -1,6 +1,6 @@
 <div class="breadcrumb-container mat-typography">
     <div>
-        <span class="mat-headline uppercase">{{currentRoute}}</span>
+        <span class="mat-headline uppercase">{{currentRoute.label}}</span>
         <ul class="breadcrumb mat-caption ">
             <li><a routerLink="" class="breadcrumb">Home</a></li>
             <li *ngFor="let breadcrumb of breadcrumbs; let last = last" [ngClass]="{ active: last }">

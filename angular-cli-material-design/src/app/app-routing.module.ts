@@ -4,8 +4,8 @@ import { ButtonsComponent } from "app/samples/buttons/buttons.component";
 import { HomeComponent } from "app/home/home.component";
 
 const routes: Routes = [
- { 
-    path: 'samples', 
+ {
+    path: 'samples',
     component: ButtonsComponent ,
     data: {
       breadcrumb: "samples"
