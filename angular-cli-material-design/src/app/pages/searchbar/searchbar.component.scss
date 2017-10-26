@@ -1,0 +1,30 @@
+.searchbar {
+    width: 100%;
+}
+
+.searchbar ::ng-deep .mat-form-field-placeholder {
+    color: white;
+}
+
+.searchbar ::ng-deep .mat-form-field {
+    color: white;
+}
+
+.searchbar ::ng-deep .mat-input-underline {
+    border-bottom: 1px solid white!important;
+    background-color: white;
+}
+
+.searchbar ::ng-deep .mat-select-underline {
+    border-bottom: 1px solid white!important;
+    background-color: white;
+}
+
+.searchbar ::ng-deep .mat-input-ripple.mat-focused {
+    background-color: #fff;
+    outline-color: #FFF;
+}
+
+.searchbar .mat-input-placeholder-wrapper .mat-form-field-placeholder-wrapper:focus {
+    outline-color: #FFF;
+}

@@ -7,9 +7,12 @@ import { Component, ViewChild } from '@angular/core';
 })
 export class AppComponent {
 
+  showSearchBar:boolean = false;
   // Initialize isDarkTheme to false
   isDarkTheme: boolean = false;
   // Your code here
+
+
 
   changeTheme(): void {
       if (this.isDarkTheme) {

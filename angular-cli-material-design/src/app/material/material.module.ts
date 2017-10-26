@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatListModule, MatToolbarModule, MatSidenavModule, MatIconModule,
-        MatCardModule, MatMenuModule} from '@angular/material';
+        MatCardModule, MatMenuModule, MatInputModule, MatAutocompleteModule, MatButtonToggleModule, MatDatepickerModule,
+        MatTabsModule, MatRadioModule, MatDialogModule, MatSelectModule, MatSliderModule, MatTooltipModule, MatGridListModule,
+        MatStepperModule, MatSnackBarModule, MatExpansionModule, MatFormFieldModule, MatPaginatorModule, MatProgressBarModule,
+        MatSortModule, MatLineModule, MatChipsModule, MatTableModule, MatSlideToggleModule} from '@angular/material';
 
 
 @NgModule({
@@ -13,7 +16,29 @@ import {MatButtonModule, MatCheckboxModule, MatListModule, MatToolbarModule, Mat
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatInputModule,
+    MatAutocompleteModule,
+    MatButtonToggleModule,
+    MatDatepickerModule,
+    MatTabsModule,
+    MatRadioModule,
+    MatDialogModule,
+    MatSelectModule,
+    MatSliderModule,
+    MatTooltipModule,
+    MatGridListModule,
+    MatStepperModule,
+    MatSnackBarModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatSortModule,
+    MatLineModule,
+    MatChipsModule,
+    MatTableModule,
+    MatSlideToggleModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -24,7 +49,29 @@ import {MatButtonModule, MatCheckboxModule, MatListModule, MatToolbarModule, Mat
     MatSidenavModule,
     MatIconModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatInputModule,
+    MatAutocompleteModule,
+    MatButtonToggleModule,
+    MatDatepickerModule,
+    MatTabsModule,
+    MatRadioModule,
+    MatDialogModule,
+    MatSelectModule,
+    MatSliderModule,
+    MatTooltipModule,
+    MatGridListModule,
+    MatStepperModule,
+    MatSnackBarModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatSortModule,
+    MatLineModule,
+    MatChipsModule,
+    MatTableModule,
+    MatSlideToggleModule
   ],
   declarations: []
 })

@@ -16,6 +16,7 @@ import { LanguagePickerComponent } from './pages/language-picker/language-picker
 import { ProfileMenuComponent } from './pages/profile-menu/profile-menu.component';
 import { HttpLoaderFactory } from 'app/translations/translation.factory';
 import { SharedModule } from 'app/shared/shared/shared.module';
+import { SearchbarComponent } from './pages/searchbar/searchbar.component';
 
 
 
@@ -29,6 +30,7 @@ import { SharedModule } from 'app/shared/shared/shared.module';
     BreadcrumbComponent,
     LanguagePickerComponent,
     ProfileMenuComponent,
+    SearchbarComponent,
 
   ],
   imports: [
