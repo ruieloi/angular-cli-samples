@@ -10,5 +10,6 @@
 
     "ROUTE_HOME": "Home",
     "ROUTE_SAMPLES": "Samples",
-    "ROUTE_BUTTONS": "Buttons"
+    "ROUTE_BUTTONS": "Buttons",
+    "ROUTE_TODO": "Todo"
 }

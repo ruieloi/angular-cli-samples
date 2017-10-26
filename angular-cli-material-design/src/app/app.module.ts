@@ -17,6 +17,8 @@ import { ProfileMenuComponent } from './pages/profile-menu/profile-menu.componen
 import { HttpLoaderFactory } from 'app/translations/translation.factory';
 import { SharedModule } from 'app/shared/shared/shared.module';
 import { SearchbarComponent } from './pages/searchbar/searchbar.component';
+import { TodoListComponent } from './samples/todo/todo-list/todo-list.component';
+import { TodoPageComponent } from './samples/todo/todo-page/todo-page.component';
 
 
 
@@ -31,6 +33,8 @@ import { SearchbarComponent } from './pages/searchbar/searchbar.component';
     LanguagePickerComponent,
     ProfileMenuComponent,
     SearchbarComponent,
+    TodoListComponent,
+    TodoPageComponent,
 
   ],
   imports: [

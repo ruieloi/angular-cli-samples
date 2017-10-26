@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ButtonsComponent } from "app/samples/buttons/buttons.component";
 import { HomeComponent } from "app/home/home.component";
+import { TodoPageComponent } from 'app/samples/todo/todo-page/todo-page.component';
 
 const routes: Routes = [
  {
     path: 'samples',
-    component: ButtonsComponent ,
     data: {
       breadcrumb: "samples"
     },
@@ -24,6 +24,13 @@ const routes: Routes = [
       component: ButtonsComponent,
       data: {
         breadcrumb: "buttons"
+      }
+    },
+    {
+      path: "todo",
+      component: TodoPageComponent,
+      data: {
+        breadcrumb: "todo"
       }
     }
     ]
