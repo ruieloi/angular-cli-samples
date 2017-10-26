@@ -25,9 +25,8 @@ export class LanguagePickerComponent implements OnInit {
   ngOnInit() {
   }
 
-
   configTranslator() {
-    this.translate.addLangs(['en', 'pt', 'es', 'fr']);
+    this.translate.addLangs(['en', 'pt', 'fr']);
     this.translate.setDefaultLang('en');
     const browserLang = this.translate.getBrowserLang();
     this.translate.use(browserLang.match(/en|pt|es|fr/) ? browserLang : 'en');

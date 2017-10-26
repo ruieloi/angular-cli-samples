@@ -35,8 +35,6 @@ export class BreadcrumbComponent implements OnInit {
       //subscribe to the NavigationEnd event
       this.router.events.filter(event => event instanceof NavigationEnd).subscribe(event => {
 
-        // console.log("route changed");
-
         //set breadcrumbs
         let root: ActivatedRoute = this.activatedRoute.root;
         this.breadcrumbs = this.getBreadcrumbs(root);
@@ -45,7 +43,12 @@ export class BreadcrumbComponent implements OnInit {
           this.currentRoute = this.breadcrumbs.slice(-1)[0];
         else
           this.currentRoute = this.breadcrumbs[0];
+
+          this.getTranslations();
+
       });
+
+
 
       this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
         this.getTranslations();
@@ -64,7 +67,7 @@ export class BreadcrumbComponent implements OnInit {
     }
 
     canShowBreadcrumb() {
-      console.log(this.currentRoute);
+
       if(this.currentRoute == null || this.currentRoute.code == ROUTE_HOME)
       {
         return false;

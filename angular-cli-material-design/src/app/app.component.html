@@ -11,22 +11,22 @@
         </div>
 
         <button mat-icon-button>
-                                                <mat-icon class="menu-icon">search</mat-icon>
-                                              </button>
-        <span>Application Title</span>
+          <mat-icon class="menu-icon">search</mat-icon>
+        </button>
+        <span>{{ 'APPLICATIONTITLE' | translate }}</span>
 
         <span class="fill-remaining-space"></span>
 
         <button mat-icon-button (click)="changeTheme()">
-                                                <mat-icon class="menu-icon">format_color_fill</mat-icon>
-                                            </button>
+            <mat-icon class="menu-icon">format_color_fill</mat-icon>
+        </button>
 
         <profile-menu></profile-menu>
         <language-picker></language-picker>
 
         <button mat-icon-button (click)="sidenavleft.toggle()">
-                                                <mat-icon class="menu-icon">format_align_right</mat-icon>
-                                            </button>
+            <mat-icon class="menu-icon">format_align_right</mat-icon>
+        </button>
     </mat-toolbar>
 
 

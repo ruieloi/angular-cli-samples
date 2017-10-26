@@ -1,13 +1,12 @@
 {
-    "Language": "Langue",
-    "English": "Anglais",
-    "Portuguese": "Portugais",
-    "French": "Français",
-    "Spanish": "Spanish",
-    "Italian": "Italien",
+    "APPLICATIONTITLE": "Application Title",
+    "LANGUAGE": "Langue",
+    "ENGLISH": "Anglais",
+    "PORTUGUESE": "Portugais",
+    "FRENCH": "Français",
 
 
-    "Buttons": "Buttons",
+    "BUTTONS": "Buttons",
 
     "ROUTE_HOME": "Home"
 
